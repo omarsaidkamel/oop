@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+	class shap
+	{
+	    protected:
+	    int hight,width;
+	    public:
+	   shap()
+	   {
+       cout<<"enter hight:";
+	   cin>>hight;
+	   cout<<"enter width:";
+	   cin>>width;
+	   }
+    };
+class triangle :shap
+{ public:
+  int area()
+  {return 0.5*hight*width; }
+};
+class rectangle:shap
+{
+     public:
+  int area()
+  {return hight*width; }
+
+};
+int main()
+{
+   triangle t;
+  cout<< t.area();
+   rectangle r;
+  cout<<  r.area();
+   return 0;
+}
+

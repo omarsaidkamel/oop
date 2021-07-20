@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+	class animal
+	{
+	    protected:
+	    string name;
+        int age;
+        public:
+        void set_value(int a,string n)
+        {  name=n;age=a;}
+    };
+class Zebra:public animal
+{ public: string place="zoo";
+
+      void z_i()
+      {
+       cout <<"the name of zebra is"<<name<<"\n";
+       cout <<"the age of zebra is"<<age<<"\n";
+       cout<<"the pace of zebra is"<<place<<"\n";
+      }
+  };
+
+class Dolphin:public animal
+{ public:
+    string place="sea";
+      void d_i()
+      {
+       cout <<"the name of Dolphin is"<<name<<"\n";
+       cout <<"the age of Dolphin is"<<age<<"\n";
+       cout<<"the pace of Dolphin is"<<place<<"\n";
+      }
+
+};
+int main()
+{
+ string nam;
+        int ag;
+    Zebra z;
+cout<<"the name of Zebra ";
+cin>>nam;
+cout<<"the age of Zebra ";
+cin>>ag;
+ z.set_value(ag,nam);
+ z.z_i();
+ Dolphin d;
+cout<<"the name of Dolphin ";
+cin>>nam;
+cout<<"the age of Dolphin ";
+cin>>ag;
+ d.set_value(ag,nam);
+ d.d_i();
+}
+
